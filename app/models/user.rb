@@ -5,5 +5,5 @@ class User < ApplicationRecord
   has_many :liked_posts, through: :likes, source: :post
   has_many :commented_posts, through: :comments, source: :post
 
-  scope :three_recent_posts, ->(user) { user.posts.order('created_at DESC').limit(3) }
+  scope :three_recent_posts, ->(user) { user.posts.order(created_at: :desc).limit(3) }
 end
