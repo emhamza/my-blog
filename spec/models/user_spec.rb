@@ -10,7 +10,7 @@ RSpec.describe User, type: :model do
     expect(subject).to_not be_valid
   end
 
-  it 'posts count shout not be less than or equal to 0' do
+  it 'posts count should not be less than or equal to 0' do
     subject.posts_count = -1
     expect(subject).to_not be_valid
   end
@@ -19,4 +19,17 @@ RSpec.describe User, type: :model do
     subject.posts_count = 'abc'
     expect(subject).to_not be_valid
   end
+
+  # describe '#three_recent_posts'  do
+  #   let(:user) { create(:user) }
+
+  #   it 'returns the three most recent posts' do
+  #     user = User.create(name: 'name')
+  #     first_post = Post.create(title: 'first_post', text: 'text', author_id: user.id)
+  #     Post.create(title: 'second_post', text: 'text', author_id: user.id)
+  #     Post.create(title: 'third_post', text: 'text', author_id: user.id)
+  #     Post.create(title: 'fourth_post', text: 'text', author_id: user.id)
+  #     expect(user.three_recent_posts).to_not include(first_post)
+  #   end
+  # end
 end
