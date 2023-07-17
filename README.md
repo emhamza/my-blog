@@ -49,6 +49,7 @@ Example command:
 ```sh
 1.use a browser
 2.use cable internet
+3. rails routes --grep users
 ```
 
 ### Setup
