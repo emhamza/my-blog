@@ -1,1 +1,17 @@
-<h1> Here goes the Post info </h1>
+<div class='show_container'>
+    <div class='box'>
+        <div class='posts_info'>
+            <p><%= @post.title%> by <%= @post.author.name%></p>
+            <p>Comments: <%= @post.comment_counter %> Likes: <%= @post.likes_counter %></p>
+        </div>
+        <p>
+            <%= @post.text%>
+        </p>
+    </div>
+    <br />
+    <div class='box'>
+        <% @post.comments.each do |comment|%>
+            <p><%= comment.author.name%>: <%= comment.text %></p>    
+        <% end %>
+    </div>
+</div>
