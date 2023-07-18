@@ -1,1 +1,3 @@
-<h1>This file is for User list</h1>
+<% @users.each do |user| %>
+    <%= render partial: 'shared/user_profile', locals: { user: user } %>
+<% end %>

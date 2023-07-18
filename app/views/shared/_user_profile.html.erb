@@ -1,0 +1,13 @@
+<div class='u_container'>
+    <div class='box img_container'>
+        <img src='<%= user.photo %>' alt='user-img' class='img_container'>
+    </div>
+    <div class='box main_card'>
+        <a href='/users/<%= user.id %>'>
+            <h2 class='user_title' ><%= user.name %></h2>
+        </a>
+        <p class='post_count'>
+            Number of posts: <%= user.posts_count %>
+        </p>
+    </div>    
+</div>
