@@ -1,0 +1,8 @@
+<%= form_with model: Comment.new, url: "/users/#{params[:id]}/posts/#{params[:post_id]}/comments/create" do |form| %>
+  <%= form.hidden_field :post_id, value: post_id %>
+  <div>
+    <%= form.label :text, 'Type your comment' %>
+    <%= form.text_field :text %>
+  </div>
+  <%= form.submit %>
+<% end %>
