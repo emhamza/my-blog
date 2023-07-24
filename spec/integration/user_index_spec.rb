@@ -29,10 +29,8 @@ RSpec.describe 'User Index Page', type: :feature do
         end
     end
 
-    # it 'can redirect to the user-show page when clicked on user-name' do
-    #     @users.each do |user|
-    #         click_link(user.name)
-    #         expect(page).to have_current_path(users_path(user))
-    #     end
-    # end
+    it 'can redirect to the user-show page when clicked on user-name' do
+        click_link(@users.first.name)
+        expect(page).to have_current_path(user_path(@users.first))
+    end
 end
