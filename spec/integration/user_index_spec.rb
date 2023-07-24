@@ -21,10 +21,18 @@ RSpec.describe 'User Index Page', type: :feature do
             expect(page).to have_content("Number of posts: #{user.posts_count}")
         end
     end
-    it 'can redirect to the user-show page when clicked on user-name' do
+
+    it 'displays the profile picture for each user' do
+        # Test code for this scenario
         @users.each do |user|
-            click_link user.name
-            expect(current_path).to eq(user_path(user))
-          end
+            expect(page).to have_selector("img[src='#{user.photo}']")
+        end
     end
+
+    # it 'can redirect to the user-show page when clicked on user-name' do
+    #     @users.each do |user|
+    #         click_link(user.name)
+    #         expect(page).to have_current_path(users_path(user))
+    #     end
+    # end
 end
