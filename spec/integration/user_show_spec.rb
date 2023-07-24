@@ -12,8 +12,7 @@ RSpec.describe 'User show method', type: :feature do
                           likes_counter: 1, comment_counter: 0),
               Post.create(author: @user, title: 'Game of Throne',
                           text: 'The best series that I have watched so far',
-                          likes_counter: 3, comment_counter: 2),
-            ]
+                          likes_counter: 3, comment_counter: 2)]
     # Update the posts_count attribute based on the number of posts
     @user.update(posts_count: @posts.count)
   end
@@ -28,29 +27,29 @@ RSpec.describe 'User show method', type: :feature do
     expect(page).to have_content(@user.name)
   end
 
-  it 'shows the number of posts that the user has written' do 
+  it 'shows the number of posts that the user has written' do
     visit user_path(@user)
     expect(page).to have_content("Number of posts: #{@user.posts_count}")
   end
 
-  it 'shows the users bio' do 
+  it 'shows the users bio' do
     visit user_path(@user)
     expect(page).to have_content(@user.bio)
   end
 
-  it 'shows the users first three posts' do 
+  it 'shows the users first three posts' do
     visit user_path(@user)
-    @posts.each do |post| 
-        expect(page).to have_content(post.title)
+    @posts.each do |post|
+      expect(page).to have_content(post.title)
     end
   end
 
-  it 'shows the the see all post button' do 
+  it 'shows the the see all post button' do
     visit user_path(@user)
     expect(page).to have_css('a.all_btn')
   end
 
-  it 'redirect to the posts link' do 
+  it 'redirect to the posts link' do
     visit user_path(@user)
     click_link('See all posts')
     expect(page).to have_current_path(user_posts_path(@user))
