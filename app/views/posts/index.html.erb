@@ -10,7 +10,7 @@
       <p class='ck_together'>Comments: <%= post.comment_counter %> Likes: <%= post.likes_counter %></p>
   </div>
   <div class='box'>
-    <% Post.get_5_comments(post).each do |comment| %>
+    <% Post.get_5_comments(post).includes([:author]).each do |comment| %>
       <p><%= comment.author.name %> - <%= comment.text %></p>
     <% end %>
   </div>
