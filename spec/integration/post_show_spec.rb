@@ -8,8 +8,7 @@ RSpec.describe 'Post show method', type: :feature do
                           text: 'Adding form to your ROR app increase credibility and better user experience',
                           likes_counter: 1, comment_counter: 1),
               Post.create(author: @user, title: 'Kurlus Osman',
-                          text: 'This is a great Turkish series whose next series will be air
-                            in the coming November only on air TV.',
+                          text: 'This is a great Turkish series whose next series will be air in the coming November only on air TV.',
                           likes_counter: 1, comment_counter: 0),
               Post.create(author: @user, title: 'Game of Throne',
                           text: 'The best series that I have watched so far',
