@@ -5,10 +5,12 @@ RSpec.describe 'User show method', type: :feature do
     @user = User.create(name: 'Tom', photo: 'https://unsplash.com/photos/man-person-standing-between-tall-trees-F_-0BxGuVvo',
                         bio: 'Teacher from Mexico', posts_count: 11)
     @posts = [Post.create(author: @user, title: 'Form in ROR',
-                          text: 'Adding form to your ROR app increase credibility and better user experience',
+                          text: 'Adding form to your ROR app increase credibility
+                          and better user experience',
                           likes_counter: 1, comment_counter: 1),
               Post.create(author: @user, title: 'Kurlus Osman',
-                          text: 'This is a great Turkish series whose next series will be air in the coming November only on air TV.',
+                          text: 'This is a great Turkish series whose next series will be air in
+                           the coming November only on air TV.',
                           likes_counter: 1, comment_counter: 0),
               Post.create(author: @user, title: 'Game of Throne',
                           text: 'The best series that I have watched so far',

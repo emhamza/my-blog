@@ -19,4 +19,3 @@ RSpec.describe Post, type: :request do
     end
   end
 end
-git che
