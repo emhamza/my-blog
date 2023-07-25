@@ -107,6 +107,12 @@ rubocop -A
 - Twitter: [@uhamzaz](https://twitter.com/uhamzaz)
 - LinkedIn: [Umair Hamza](https://www.linkedin.com/in/umair-hamza-a8262b261/)
 
+👤 **Abbas Sarwar**
+
+- GitHub: [@AbbasSarwar](https://github.com/AbbasSarwar)
+- Twitter: [@Abbas_sDev](https://twitter.com/Abbas_sDev)
+- LinkedIn: [Abbas-Sarwar](https://www.linkedin.com/in/abbas-sarwar-4a0b16257/)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
