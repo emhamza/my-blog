@@ -63,19 +63,19 @@ RSpec.describe 'User show method', type: :feature do
     expect(page).to have_content(@posts[0].comment_counter)
   end
 
-  # it 'should shows a Likes counter' do
-  #   visit user_posts_path(@user, @posts)
-  #   expect(page).to have_content(@posts[0].likes_counter)
-  # end
+  it 'should shows a Likes counter' do
+    visit user_posts_path(@user, @posts)
+    expect(page).to have_content(@posts[0].likes_counter)
+  end
 
-  # it 'should shows a Pagination' do
-  #   visit user_posts_path(@user, @posts)
-  #   expect(page).to have_content('Pagination')
-  # end
+  it 'should shows a Pagination' do
+    visit user_posts_path(@user, @posts)
+    expect(page).to have_content('Pagination')
+  end
 
-  # it 'should redirect me to the post page' do
-  #   visit user_posts_path(@user, @posts)
-  #   click_link(@posts[0].title)
-  #   expect(page).to have_current_path(post_path(@user, @posts[0]))
-  # end
+  it 'should redirect me to the post page' do
+    visit user_posts_path(@user, @posts)
+    click_link(@posts[0].title)
+    expect(page).to have_current_path(post_path(@user, @posts[0]))
+  end
 end
