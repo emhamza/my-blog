@@ -93,6 +93,11 @@ To run tests for the linter, run the following command:
 Example command:
 
 ```sh
+rspec
+bundle exec rspec spec/integration
+```
+
+```sh
 rubocop -A
 ```
 
