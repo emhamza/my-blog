@@ -101,3 +101,9 @@ a {
   width: 66%;
   margin-left: 10rem;
 }
+
+.sign-dev {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

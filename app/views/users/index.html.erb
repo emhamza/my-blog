@@ -1,7 +1,11 @@
-<div>
+<div class='sign-dev'>
     <a href='/users/new/posts/new'> Add New Post</a>
 </div>
 
 <% @users.each do |user| %>
     <%= render partial: 'shared/user_profile', locals: { user: user } %>
 <% end %>
+
+<div class='sign-dev'>
+    <a href='<%= new_user_registration_path %>'>Sign up here</a>
+</div>
