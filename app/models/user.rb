@@ -1,4 +1,9 @@
 class User < ApplicationRecord
+  before_validation :set_default
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :validatable, :confirmable
   has_many :posts, foreign_key: :author_id
   has_many :comments, foreign_key: :author_id
   has_many :likes, foreign_key: :author_id
@@ -9,4 +14,9 @@ class User < ApplicationRecord
 
   validates :name, presence: true
   validates :posts_count, numericality: { only_integer: true }, comparison: { greater_than_or_equal_to: 0 }
+
+  def set_default
+    self.name = email.split('@')[0]
+    self.posts_count = 0
+  end
 end
