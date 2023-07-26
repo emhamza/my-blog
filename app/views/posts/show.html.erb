@@ -11,10 +11,22 @@
     <br />
     <%= render 'shared/like' %>
     <a href=<%= "/users/#{params[:id]}/posts/#{@post.id}/comments/new" %>>Comment</a>
+    <% if can? :destroy, @post %>
+    <%= form_with(model: @post, url: user_post_path(params[:user_id], @post), method: :delete, data: { confirm: "Please confirm?" }) do |form| %>
+        <%= form.submit "Delete Post" %>
+       <% end %>
+     <% end %>
 
     <div class='box'>
         <% @post.comments.each do |comment|%>
-            <p><%= comment.author.name%>: <%= comment.text %></p>    
+            <p><%= comment.author.name%>: <%= comment.text %></p>
+            
+            <% if can? :destroy, @post %>
+                <%= form_with(model: @comment, url: user_post_comment_path(params[:user_id], @post), method: :delete, data: { confirm: "Please confirm?" }) do |form| %>
+                    <%= form.hidden_field :comment_del, value: "#{comment.id}"%>
+                    <%= form.submit "Delete Comment" %>
+                    <% end %>
+            <% end %>
         <% end %>
     </div>
 </div>
