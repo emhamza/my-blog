@@ -10,7 +10,7 @@
     </div>
     <br />
     <%= render 'shared/like' %>
-    <a href=<%= "/users/id/posts/#{@post.id}/comments/new" %>>Comment</a>
+    <a href=<%= "/users/#{params[:id]}/posts/#{@post.id}/comments/new" %>>Comment</a>
 
     <div class='box'>
         <% @post.comments.each do |comment|%>

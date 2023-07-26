@@ -1,3 +1,4 @@
-<%= form_with model: @like, url: "/users/#{params[:id]}/posts/#{params[:post_id]}/likes/create" do |form| %>
+<%= form_with model: @like, url: user_post_likes_path(@user, @post) do |form| %>
     <%= form.submit 'Like' %>
-<% end %>
+  <% end %>
+  
