@@ -15,8 +15,8 @@ class User < ApplicationRecord
   validates :name, presence: true
   validates :posts_count, numericality: { only_integer: true }, comparison: { greater_than_or_equal_to: 0 }
 
-  # def set_default
-  #   self.name = email.split('@')[0]
-  #   self.posts_count = 0
-  # end
+  def set_default
+    self.name = email.split('@')[0]
+    self.posts_count = 0
+  end
 end
