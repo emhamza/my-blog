@@ -21,12 +21,12 @@
         <% @post.comments.each do |comment|%>
             <p><%= comment.author.name%>: <%= comment.text %></p>
             
-            # <% if can? :destroy, @post %>
-            #     <%= form_with(model: @comment, url: user_post_comment_path(params[:user_id], @post), method: :delete, data: { confirm: "Please confirm?" }) do |form| %>
-            #         <%= form.hidden_field :comment_del, value: "#{comment.id}"%>
-            #         <%= form.submit "Delete Comment" %>
-            #         <% end %>
-            # <% end %>
+            <% if can? :destroy, @post %>
+                <%= form_with(model: @comment, url: user_post_comment_path(params[:user_id], @post), method: :delete, data: { confirm: "Please confirm?" }) do |form| %>
+                    <%= form.hidden_field :comment_del, value: "#{comment.id}"%>
+                    <%= form.submit "Delete Comment" %>
+                    <% end %>
+            <% end %>
         <% end %>
     </div>
 </div>
