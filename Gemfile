@@ -5,6 +5,8 @@ ruby '3.2.2'
 
 gem 'cancancan'
 
+gem 'rswag'
+
 gem 'rubocop', '>= 1.0', '< 2.0'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
