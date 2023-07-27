@@ -13,7 +13,7 @@ class Api::CommentsController < Api::ApplicationController
     if comment.save
       render json: comment, status: :created
     else
-      render json: { error: "Comment could not be created." }, status: :unprocessable_entity
+      render json: { error: 'Comment could not be created.' }, status: :unprocessable_entity
     end
   end
 
