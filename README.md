@@ -61,7 +61,7 @@ Example commands:
 ```sh
 
   git clone git@github.com:emhamza/my-blog.git
-  cd Catalog-of-my-things
+  cd my-blog
 
 
 ```
