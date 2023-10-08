@@ -49,7 +49,7 @@ Example command:
 ```sh
 1.use a browser
 2.use cable internet
-3. rails routes --grep users
+3.rails routes --grep users
 ```
 
 ### Setup
@@ -62,7 +62,6 @@ Example commands:
 
   git clone git@github.com:emhamza/my-blog.git
   cd my-blog
-
 
 ```
 
@@ -151,7 +150,7 @@ If you like this project kindly give it a star⭐️.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank Microverse for the immense support.
+I would like to thank Microverse for the immense support and giving me an opportunity to work on this project.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
